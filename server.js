@@ -19,6 +19,16 @@ var PORT =8080
 //    console.log("connected!")
 //  });
   
+
+// Make connection.
+
+  console.log("connected as id " + connection.threadId);
+});
+
+console.log("connected!");
+
+
+
 app.listen(PORT, function() {
 	console.log("App listening on PORT: " + PORT);
   });
