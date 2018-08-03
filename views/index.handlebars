@@ -2,7 +2,7 @@
 
 <h3>Uneaten</h3>
   <div class="row"></div>
-    {{#each buger_data}}
+    {{#each burgers}}
       {{#unless this.devoured}}
         <div class="col-md-5">
           <button class="uneated" id={{this.id}} data-id={{this.id}}>{{this.burger_name}} </button>
@@ -12,7 +12,7 @@
   </div>
   <h3>Devoured</h3>
     <div class="row">
-      {{#each burger_data}}
+      {{#each burgers}}
         {{#if this.devoured}}
           <div class="col-md-5">
             <h5>{{this.burger_name}}</h5>
