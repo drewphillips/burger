@@ -3,7 +3,7 @@ var express = require("express");
 var burgers = require("../models/burger.js");
 var router = express.Router();
 
-// Create all our routes and set up logic within those routes where required.
+// Create routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burgers.all(function(data) {
     var hbsObject = {
@@ -14,26 +14,26 @@ router.get("/", function(req, res) {
   });
 });
 
+//post burgers to the page, not the table
+
 router.post("/create/burgers", function(req, res) {
-  burgers.create(req.body.burger_name, function(results){
+  // console.log(req.body.burgername);
+  burgers.create(req.body.burgername, function(results){
     console.log(results);
 
     res.redirect("/");
   })
 });
 
+//add burgers to the mysql table
+
 router.put("/burgers/:id", function(req, res) {
-
-
     burgers.update(req.params.id, function(result){
       console.log(result);
 
       res.sendStatus(200);
     })
-
-  
 });
-
 
 // Export routes for server.js to use.
 module.exports = router;

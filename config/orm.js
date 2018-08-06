@@ -28,8 +28,6 @@ function objToSql(ob){
     return arr.toString();
 }
 
-
-
 // custom orm:
 
 let orm = {
