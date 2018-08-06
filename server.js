@@ -18,6 +18,9 @@ var PORT = process.env.PORT || 8080;
 // serving up our public folder
 app.use(express.static("public"));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 // setting up and configuring handlebars as our templateing engine for our views
 var exphbs = require("express-handlebars")

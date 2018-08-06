@@ -54,7 +54,7 @@ let orm = {
 
         console.log("Create queryString: " + queryString);
 
-        connetion.query(queryString, vals, function(err, results){
+        connection.query(queryString, vals, function(err, results){
             if(err){
                 throw err;
             }

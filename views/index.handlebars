@@ -5,7 +5,7 @@
     {{#each burgers}}
       {{#unless this.devoured}}
         <div class="col-md-5">
-          <button class="uneated" id={{this.id}} data-id={{this.id}}>{{this.burgername}} </button>
+          <button class="devour" id={{this.id}} data-id={{this.id}}>{{this.burgername}} </button>
         </div>
         {{/unless}}
         {{/each}}    
